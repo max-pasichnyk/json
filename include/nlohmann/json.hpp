@@ -6653,7 +6653,7 @@ class basic_json
     static basic_json parse(InputType&& i,
                             const parser_callback_t cb = nullptr,
                             const bool allow_exceptions = true,
-                            const bool ignore_comments = false)
+                            const bool ignore_comments = true)
     {
         basic_json result;
         parser(detail::input_adapter(std::forward<InputType>(i)), cb, allow_exceptions, ignore_comments).parse(true, result);
